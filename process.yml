@@ -1,0 +1,5 @@
+apps:
+  - script   : './bin/www'
+    name     : 'merchant_portal'
+    exec_mode: 'cluster'
+    instances: -1

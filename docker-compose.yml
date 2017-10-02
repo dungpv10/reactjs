@@ -1,0 +1,14 @@
+version: '2'
+services:
+  merchant_portal:
+    build: .docker/images/node_js
+    image: local/merchant_portal
+    container_name: merchant_portal
+    restart: always 
+    environment:
+     - NODE_ENV=development
+     - DEBUG=merchant_portal
+    ports:
+     - "8020:3000"     
+    volumes:
+     - .:/usr/src/app
