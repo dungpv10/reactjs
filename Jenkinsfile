@@ -51,8 +51,8 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'rsync -avzhe --progress --delete ./* ~/merchant_web'
-        sh 'sudo docker restart merchant-web'
+        sh 'rsync -avzhe --progress --delete ./* ~/merchant_portal'
+        sh 'sudo docker restart merchant-portal'
         script {
           utils.sendMessage "SUCCESS", gitShortCommit
         }
